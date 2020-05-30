@@ -1,0 +1,11 @@
+......
+set ip = 0
+if ($http_x_forward_for ^~ xx.xx.xx.xx){
+    set ip = 1
+}
+location ^~ /admin {
+    if ($ip ~ 0){
+        return 403
+    }
+}
+......
