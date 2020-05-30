@@ -9,3 +9,10 @@ location ^~ /admin {
     }
 }
 ......
+--------------or------------------
+location ^~ /upload {
+    root /soft/code/upload;
+    if ($request_filename ~* (.*)\.php){
+        return 403;
+    }
+}
