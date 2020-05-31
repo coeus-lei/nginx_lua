@@ -39,6 +39,6 @@ if productCacheKey == "" or productCache == nil then
  productHTML = productCacheJSON.pic,
  }
  
---rendering html with lua resty.template 
+--dynamic rendering html with lua resty.template 
  local template = require("resty.template")
  template.render("product.html", context)
